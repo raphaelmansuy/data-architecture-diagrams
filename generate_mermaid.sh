@@ -75,5 +75,5 @@ find "$DIRECTORY" -name '*.mmd' -print0 | while read -d $'\0' file; do
     output_file_png="${output_file%.mmd}.png"
     echo "Processing '$file' -> '$output_file_png'"
     # using inkscape to convert svg to png
-    mmdc -i "$file" -o "$output_file_png" -s 10
+    mmdc -i "$file" -o "$output_file_png" #-s 10
 done
