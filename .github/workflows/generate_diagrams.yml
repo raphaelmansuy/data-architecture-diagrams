@@ -67,4 +67,5 @@ jobs:
             git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/raphaelmansuy/data-architecture-diagrams.git"
           else
             echo "No changes to commit"
+            exit 0
           fi
