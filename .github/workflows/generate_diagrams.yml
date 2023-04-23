@@ -36,6 +36,7 @@ jobs:
           pip3 install -r requirements.txt --no-cache-dir
           # Install Mermaid CLI
           sudo npm install -g @mermaid-js/mermaid-cli
+          sudo npm install
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
