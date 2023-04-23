@@ -3,7 +3,7 @@
 ## Domain oriented ownership
 
 ```mermaid
-graph LR
+graph TB
 DataMesh[Data Mesh] --> DomainOwnership(Domain-oriented Ownership)
 subgraph DomainOwnership
     DO1[Team A - Domain Data]
@@ -15,7 +15,7 @@ end
 ## Decentralized Architecture and Self-serve Data Infrastructure
 
 ```mermaid
-graph LR
+graph TB
 DataMesh[Data Mesh] --> DecentralizedArchitecture(Decentralized Architecture)
 DataMesh --> SelfServeInfrastructure(Self-serve Data Infrastructure)
 
@@ -38,7 +38,7 @@ SelfServeInfrastructure -->|Reduce bottlenecks| DecentralizedArchitecture
 ## Standardized Data Exchange
 
 ```mermaid
-graph LR
+graph TB
 DataMesh[Data Mesh] --> StandardizedDataExchange(Standardized Data Exchange and Governance)
 
 subgraph StandardizedDataExchange
@@ -51,7 +51,7 @@ end
 ## Data as a Product
 
 ```mermaid
-graph LR
+graph TB
 DataMesh[Data Mesh] --> DataAsProduct(Data as Product)
 
 subgraph DataAsProduct

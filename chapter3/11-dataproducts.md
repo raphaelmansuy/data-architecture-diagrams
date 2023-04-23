@@ -1,7 +1,7 @@
 # Dataproducts
 
 ```mermaid
-graph TB
+graph LR
     A((Data Integration))
     B[Data as a Service <br>DaaS]
     C[Data as a Product <br>DaaP]

@@ -1,6 +1,6 @@
 
 ```mermaid
-graph LR
+graph TB
     A[Open-Source Ecosystem] --> B[Accelerated Innovation]
     A --> C[Reduced Barriers to Entry]
     A --> D[Customization and Flexibility]

@@ -1,7 +1,7 @@
 # The Advent of Big Data: Hadoop and MapReduce
 
 ```mermaid
-graph LR
+graph TB
 A[Big Data]
 B[Hadoop]
 C[MapReduce]

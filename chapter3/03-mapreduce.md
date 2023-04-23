@@ -1,7 +1,7 @@
 # A mapreduce process
 
 ```mermaid
-graph LR
+graph TB
 A[Input Data] -->|Split into chunks| B[Mapper 1]
 A -->|Split into chunks| C[Mapper 2]
 A -->|Split into chunks| D[Mapper 3]

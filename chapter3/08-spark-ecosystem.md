@@ -1,7 +1,7 @@
 # Spark ecosystem
 
 ```mermaid
-graph TD
+graph LR
 A[Apache Spark] --> B[Spark SQL]
 A --> C[Spark Streaming]
 A --> D[Spark Structured Streaming]

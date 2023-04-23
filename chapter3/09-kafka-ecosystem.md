@@ -1,6 +1,6 @@
 # Kafka ecosystem
 ```mermaid
-graph TD
+graph LR
     A[Apache Kafka] --> B[Producers]
     A --> C[Consumers]
     A --> D[Brokers]

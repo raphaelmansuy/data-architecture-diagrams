@@ -1,7 +1,7 @@
 # Future trends of data integration
 
 ```mermaid
-graph TD
+graph LR
 A[Potential Future Trends in Data Integration]
 B[Real-time Data Integration]
 C[Machine Learning and AI-driven Integration]
