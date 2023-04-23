@@ -1,0 +1,17 @@
+.mermaid {
+  background-color: white;
+}
+
+.mermaid .node circle,
+.mermaid .node rect {
+  stroke: black;
+  fill: white;
+}
+
+.mermaid .label {
+  fill: black;
+}
+
+.mermaid .edgePath .path {
+  stroke: black;
+}
