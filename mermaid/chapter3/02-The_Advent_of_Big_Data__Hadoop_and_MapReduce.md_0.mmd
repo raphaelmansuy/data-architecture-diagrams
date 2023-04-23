@@ -1,0 +1,27 @@
+graph LR
+A[Big Data]
+B[Hadoop]
+C[MapReduce]
+D[Hadoop Distributed File System HDFS]
+E[Hadoop MapReduce Engine]
+F[Google File System GFS]
+G[Google's MapReduce]
+H[Map Function]
+I[Reduce Function]
+J[Apache Spark]
+K[Modern Data Stack]
+
+A --> B
+A --> C
+B --> D
+B --> E
+B -.-> F
+B -.-> G
+C --> H
+C --> I
+C -.-> G
+D -.-> F
+E -.-> G
+H --> J
+I --> J
+J --> K

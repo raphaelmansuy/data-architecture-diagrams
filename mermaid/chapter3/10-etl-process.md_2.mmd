@@ -1,0 +1,13 @@
+graph LR
+A[Data Sources] -->|Extract| B(Extracted Data)
+B -->|Load| C(Data Lake Storage)
+C -->|Transform| D(Transformed Data)
+D -->|Result| E(Analytical Insights)
+subgraph DataSourceTypes
+A1[Relational Databases]
+A2[Flat Files]
+A3[APIs]
+end
+A1 --> A
+A2 --> A
+A3 --> A

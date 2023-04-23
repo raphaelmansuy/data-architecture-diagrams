@@ -1,0 +1,18 @@
+graph LR
+DataMesh[Data Mesh] --> DecentralizedArchitecture(Decentralized Architecture)
+DataMesh --> SelfServeInfrastructure(Self-serve Data Infrastructure)
+
+subgraph DecentralizedArchitecture
+    DA1[Independent Data Infrastructure A]
+    DA2[Independent Data Infrastructure B]
+    DA3[Independent Data Infrastructure C]
+end
+
+subgraph SelfServeInfrastructure
+    SS1[Discover and Access Data]
+    SS2[Process and Transform Data]
+    SS3[Consume Data for Decision-making]
+end
+
+%% Relationship
+SelfServeInfrastructure -->|Reduce bottlenecks| DecentralizedArchitecture
