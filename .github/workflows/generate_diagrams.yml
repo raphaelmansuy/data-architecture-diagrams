@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT }}
 
       - name: Cache Node.js modules
         uses: actions/cache@v2
@@ -63,7 +66,7 @@ jobs:
           git_status=$(git status --porcelain)
           if [ -n "$git_status" ]; then
             git commit -m "Extracted and generated Mermaid diagrams"
-            git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/raphaelmansuy/data-architecture-diagrams.git"
+            # git remote set-url origin "https://${{ secrets.GH_PAT }}@github.com/raphaelmansuy/data-architecture-diagrams.git"
             git push
           else
             echo "No changes to commit"
