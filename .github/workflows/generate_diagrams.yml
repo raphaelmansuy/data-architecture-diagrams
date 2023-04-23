@@ -32,9 +32,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y npm
-          sudo npm install -g @mermaid-js/mermaid-cli
+          sudo 
           sudo apt-get install -y python3 python3-pip
           pip3 install -r requirements.txt --no-cache-dir
+          # Install Mermaid CLI
+          npm install -g @mermaid-js/mermaid-cli
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
