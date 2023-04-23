@@ -34,9 +34,10 @@ jobs:
           sudo apt-get install -y npm
           sudo apt-get install -y python3 python3-pip
           pip3 install -r requirements.txt --no-cache-dir
+          # Install chromium
+          sudo apt-get install -y chromium-browser
           # Install Mermaid CLI
           sudo npm install -g @mermaid-js/mermaid-cli
-          sudo npm install
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
