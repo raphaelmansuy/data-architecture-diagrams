@@ -63,9 +63,10 @@ jobs:
           git_status=$(git status --porcelain)
           if [ -n "$git_status" ]; then
             git commit -m "Extracted and generated Mermaid diagrams"
-            git commit -m "Extracted and generated Mermaid diagrams"
             git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/raphaelmansuy/data-architecture-diagrams.git"
+            git push
           else
             echo "No changes to commit"
             exit 0
           fi
+    
