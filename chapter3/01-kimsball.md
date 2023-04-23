@@ -2,7 +2,6 @@ Kimsball star schema concept
 
 ```mermaid
 graph LR
-  theme neutral
   F([Fact_Sales])
   D1(Dim_Date)
   D2(Dim_Product)

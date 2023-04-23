@@ -62,6 +62,8 @@ if [[ ! -d $OUTPUT_DIRECTORY ]]; then
     mkdir -p "$OUTPUT_DIRECTORY"
 fi
 
+style="mermaid_excalidraw.json"
+
 # Find all '*.mmd' files in the input directory and run the 'mmdc' command on each file
 find "$DIRECTORY" -name '*.mmd' -print0 | while read -d $'\0' file; do
     output_file="$OUTPUT_DIRECTORY/$(basename "$file")"
@@ -70,10 +72,10 @@ find "$DIRECTORY" -name '*.mmd' -print0 | while read -d $'\0' file; do
     # replace .mmd with .png
     output_file_svg="${output_file%.mmd}.svg"
     echo "Processing '$file' -> '$output_file_svg'" 
-    mmdc -i "$file" -o "$output_file_svg" -c mermaid.css #-s 10
+    mmdc -c "$style" -i "$file" -o "$output_file_svg"  #-s 10
     # replace .mmd with .png
     output_file_png="${output_file%.mmd}.png"
     echo "Processing '$file' -> '$output_file_png'" 
     # using inkscape to convert svg to png
-    mmdc -i "$file" -o "$output_file_png" -c mermaid.css #-s 10
+    mmdc -c "$style" -s 10 -i "$file" -o "$output_file_png" 
 done

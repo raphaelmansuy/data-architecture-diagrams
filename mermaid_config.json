@@ -1,0 +1,21 @@
+{
+  "theme": "neutral",
+  "themeVariables": {
+    "background": "white",
+    "primaryColor": "black",
+    "textColor": "black",
+    "fontSize": "14px",
+    "edgeColor": "black",
+    "edgeTextColor": "black",
+    "clusterBkg": "white",
+    "clusterBorder": "black",
+    "messageTextColor": "black",
+    "actorBkg": "white",
+    "actorBorder": "black",
+    "actorTextColor": "black",
+    "nodeBkg": "white",
+    "nodeBorder": "black",
+    "nodeTextColor": "black",
+    "labelColor": "black"
+  }
+}
