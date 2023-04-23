@@ -11,13 +11,31 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Cache Node.js modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Cache Python dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y npm
           sudo npm install -g mermaid.cli
           sudo apt-get install -y python3 python3-pip
-          pip3 install -r requirements.txt
+          pip3 install -r requirements.txt --no-cache-dir
+
       - name: Extract and Generate Mermaid Diagrams
         run: |
           # List all directories that start with "chapter"
@@ -30,14 +48,17 @@ jobs:
             # Execute generate_mermaid.sh in the directory
             ./generate_mermaid.sh -d "mermaid/$d" -o "diagrams/$d"
           done
+
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add diagrams
-          git commit -m "Extracted and generated Mermaid diagrams"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          git add mermaid
+          git_status=$(git status --porcelain)
+          if [ -n "$git_status" ]; then
+            git commit -m "Extracted and generated Mermaid diagrams"
+            git push
+          else
+            echo "No changes to commit"
+          fi
