@@ -34,14 +34,13 @@ jobs:
           sudo apt-get install -y npm
           sudo apt-get install -y python3 python3-pip
           pip3 install -r requirements.txt --no-cache-dir
-          # Install chromium
           # Install Mermaid CLI and Puppeteer
           sudo npm install -g puppeteer @mermaid-js/mermaid-cli          
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
           # Set the PUPPETEER_EXECUTABLE_PATH environment variable
-          export PUPPETEER_EXECUTABLE_PATH=$(npm root -g)/puppeteer/.local-chromium/linux-*/chrome-linux/chrome   
+          # export PUPPETEER_EXECUTABLE_PATH=$(npm root -g)/puppeteer/.local-chromium/linux-*/chrome-linux/chrome   
           # List all directories that start with "chapter"
           directories=(chapter*)
           # Loop through each directory
