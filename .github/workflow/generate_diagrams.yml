@@ -1,0 +1,41 @@
+name: Extract and Generate Mermaid Diagrams
+on:
+  push:
+    branches:
+      - master
+jobs:
+  extract-and-generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y npm
+          sudo npm install -g mermaid.cli
+          sudo apt-get install -y python3 python3-pip
+          pip3 install -r requirements.txt
+      - name: Extract and Generate Mermaid Diagrams
+        run: |
+          # List all directories that start with "chapter"
+          directories=(chapter*)
+          # Loop through each directory
+          for d in "${directories[@]}"
+          do
+            # Execute extract_all.sh in the directory
+            ./extract_all.sh "$d" "mermaid/$d"
+            # Execute generate_mermaid.sh in the directory
+            ./generate_mermaid.sh -d "mermaid/$d" -o "diagrams/$d"
+          done
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add diagrams
+          git commit -m "Extracted and generated Mermaid diagrams"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
