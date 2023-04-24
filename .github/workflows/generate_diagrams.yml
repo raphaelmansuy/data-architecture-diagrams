@@ -2,9 +2,6 @@ name: Extract and Generate Mermaid Diagrams
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
 jobs:
   extract-and-generate:
     runs-on: ubuntu-latest
@@ -44,7 +41,7 @@ jobs:
           # Install Puppeteer
           npm install puppeteer
           # Run install_virgil_font.sh
-          # ./install_virgil_font.sh
+          ./install_virgil_font.sh
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
