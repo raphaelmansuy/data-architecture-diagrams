@@ -5,7 +5,7 @@
     "primaryColor": "black",
     "textColor": "black",
     "fontSize": "16px",
-    "fontFamily": "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive",
+    "fontFamily": "'Virgil','Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive",
     "lineStyle": "round",
     "lineWidth": 2,
     "edgeColor": "black",

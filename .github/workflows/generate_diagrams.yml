@@ -42,7 +42,9 @@ jobs:
           # Install Mermaid CLI and Puppeteer
           sudo npm install -g puppeteer @mermaid-js/mermaid-cli
           # Install Puppeteer
-          npm install puppeteer          
+          npm install puppeteer
+          # Run install_virgil_font.sh
+          ./install_virgil_font.sh
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
