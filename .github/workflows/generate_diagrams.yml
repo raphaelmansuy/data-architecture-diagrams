@@ -44,7 +44,7 @@ jobs:
           # Install Puppeteer
           npm install puppeteer
           # Run install_virgil_font.sh
-          ./install_virgil_font.sh
+          # ./install_virgil_font.sh
 
       - name: Extract and Generate Mermaid Diagrams
         run: |
