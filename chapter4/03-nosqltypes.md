@@ -29,4 +29,4 @@ graph TD
 
   F---|Examples| O[CockroachDB]
   F---|Examples| P[ArangoDB]
-  ```
+```
