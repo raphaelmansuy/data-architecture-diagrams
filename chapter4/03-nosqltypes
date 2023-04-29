@@ -13,6 +13,7 @@ graph TD
   A-->D
   A-->E
   A-->F
+  A-->G
 
   B---|Examples| G[MongoDB]
   B---|Examples| H[CouchDB]
