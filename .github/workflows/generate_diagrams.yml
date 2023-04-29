@@ -68,8 +68,9 @@ jobs:
           if [ -n "$git_status" ]; then
             git commit -m "Extracted and generated Mermaid diagrams"
             # git remote set-url origin "https://${{ secrets.GH_PAT }}@github.com/raphaelmansuy/data-architecture-diagrams.git"
-            git pull --rebase
-            git push
+            git fetch
+            git merge origin/main
+            git push origin main
           else
             echo "No changes to commit"
             exit 0
