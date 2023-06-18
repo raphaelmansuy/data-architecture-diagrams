@@ -32,4 +32,9 @@ graph TD
 
   F-->T[Geography]
   F-->U[Geometry]
+<<<<<<< HEAD
 ```
+=======
+  ```
+  pe 
+>>>>>>> a78c7e31022020dc122c814604250d1fe7bf8adb

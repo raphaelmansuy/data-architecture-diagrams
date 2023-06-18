@@ -1,5 +1,8 @@
+
+
 ```mermaid
 graph TD
+   G[Time Series DB]
   A[NoSQL Databases]
   B[Document-Based]
   C[Column-Based]
@@ -12,8 +15,8 @@ graph TD
   A-->D
   A-->E
   A-->F
+  A-->G
 
-  B---|Examples| G[MongoDB]
   B---|Examples| H[CouchDB]
 
   C---|Examples| I[Cassandra]
@@ -25,8 +28,14 @@ graph TD
 
   E---|Examples| M[Neo4j]
   E---|Examples| N[OrientDB]
-  E---|Examples| R[Amazon Neptune]
 
   F---|Examples| O[CockroachDB]
   F---|Examples| P[ArangoDB]
+<<<<<<< HEAD
 ```
+=======
+
+  G---|Examples| S[InfluxDB]
+
+  ```
+>>>>>>> a78c7e31022020dc122c814604250d1fe7bf8adb
