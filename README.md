@@ -14,6 +14,11 @@ npm install -g @mermaid-js/mermaid-cli
 extract_all.sh chapter3 mermaid/chapter3
 ```
 
+mac :
+```bash
+./extract_all_3.sh chapter3 mermaid/chapter3
+```
+
 This extracts the mermaid diagrams from the markdown files contained in the `chapter3` director and saves them in the `mermaid/chapter3` folder.
 
 ### Step3 generate the diagrams
