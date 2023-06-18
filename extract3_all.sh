@@ -2,7 +2,9 @@
 
 
 # Create the mermaid directory
-mkdir mermaid
+if [ ! -d "mermaid" ]; then
+  mkdir mermaid
+fi
 
 # clean up the mermaid directory
 rm -rf mermaid
